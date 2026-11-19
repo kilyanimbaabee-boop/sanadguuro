@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#64113d">
+<title>Happy 100 Day My Queen</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:22px 12px 35px;text-align:center;color:#fff;font-family:Georgia,serif;background:radial-gradient(circle at top,#b83d78,#64113d 55%,#270b25);overflow-x:hidden}
+.container{max-width:490px;margin:18px auto;padding:28px 17px;border:1px solid #ffffff50;border-radius:25px;background:#ffffff12;box-shadow:0 20px 60px #0007}
+.small{letter-spacing:3px;font:11px Arial,sans-serif;color:#ffd3e5}
+h1{font-size:clamp(34px,9vw,43px);color:#fff2f7;text-shadow:0 4px 20px #ff6eaa;margin:15px 0 8px}
+.subtitle,.instruction{color:#ffe0ed;font:14px Arial,sans-serif;line-height:1.7}
+.cake-area{height:235px;display:flex;align-items:center;justify-content:center}
+.cake{position:relative;width:230px;height:190px;animation:floatCake 3s ease-in-out infinite}
+@keyframes floatCake{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+.plate{position:absolute;bottom:8px;left:10px;width:210px;height:22px;border-radius:50%;background:linear-gradient(white,#ef8db8);box-shadow:0 7px 15px #24051c70}
+.bottom{position:absolute;bottom:30px;left:30px;width:170px;height:70px;border-radius:15px 15px 20px 20px;background:linear-gradient(90deg,#df397b,#fff0f5,#e75a96)}
+.top{position:absolute;bottom:88px;left:50px;width:130px;height:48px;border-radius:50% 50% 12px 12px;background:linear-gradient(90deg,#ff9ec5,#fff,#f47eae)}
+.icing{position:absolute;bottom:119px;left:50px;width:130px;height:18px;border-radius:50%;background:white}
+.drip{position:absolute;bottom:103px;left:65px;width:12px;height:24px;background:white;border-radius:0 0 10px 10px;box-shadow:35px 5px white,70px -2px white,100px 5px white}
+.number-wrap{position:absolute;bottom:143px;left:0;width:100%;display:flex;justify-content:center;align-items:center;gap:5px;z-index:5;font-family:Arial,sans-serif;font-weight:900;font-size:49px;letter-spacing:-3px}
+.one{color:#fff8b0;text-shadow:0 0 5px #fff,0 0 12px #ffdb55,0 0 25px #ff8b24,0 0 38px #ff4b24;animation:fireGlow .65s infinite alternate;position:relative}
+.one:before{content:"";position:absolute;left:7px;top:-18px;width:15px;height:25px;border-radius:60% 40% 55% 45%;background:radial-gradient(ellipse at 50% 70%,#fff 0 12%,#ffe66b 35%,#ff8b24 65%,#ff3c27 90%);filter:drop-shadow(0 0 8px #ff9b22);animation:flame .35s infinite alternate}
+.zero{color:#fff0f7;text-shadow:0 0 7px #fff,0 0 18px #ff6eaa,0 0 30px #ff3d91}
+@keyframes fireGlow{to{filter:brightness(1.35);transform:scale(1.04)}}
+@keyframes flame{to{transform:rotate(9deg) scale(.83);filter:drop-shadow(0 0 13px #ffcf45)}}
+.heart{position:fixed;bottom:-30px;color:#ff9bc8;animation:float 10s linear infinite;pointer-events:none}
+@keyframes float{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+#surprises{display:none;margin-top:28px}
+#surprises.show{display:block;animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.section-title{font-size:23px;color:#ffe7f0;margin:12px 0 7px}
+.section-note{font:13px Arial,sans-serif;color:#ffd6e7;margin:0 0 18px}
+.envelope-card{margin:18px auto;padding:17px 12px 20px;max-width:390px;border:1px solid #ffffff35;border-radius:19px;background:#ffffff0c}
+.envelope-card h3{font-size:17px;margin:5px 0 12px;color:#fff0f6}
+.envelope-button{border:0;background:transparent;cursor:pointer;color:white;padding:0}
+.envelope{position:relative;width:190px;height:115px;margin:8px auto 12px;filter:drop-shadow(0 8px 10px #0006)}
+.env-body{position:absolute;inset:15px 0 0;background:#ffd4e5;border-radius:8px}
+.env-flap{position:absolute;top:15px;left:0;border-left:95px solid transparent;border-right:95px solid transparent;border-top:65px solid #ff9fc5;transform-origin:top;transition:transform .8s;z-index:3}
+.env-front{position:absolute;inset:15px 0 0;background:linear-gradient(35deg,#e85b92,#ffb6d1);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px;z-index:4}
+.seal{position:absolute;top:57px;left:78px;width:34px;height:34px;border-radius:50%;background:#a91e58;display:grid;place-items:center;z-index:5}
+.envelope-button.open .env-flap{transform:rotateX(180deg);z-index:1}
+.envelope-button.open .seal{opacity:0}
+.tap-label{font:11px Arial,sans-serif;letter-spacing:1px;color:#ffe4ef}
+.letter{display:none;margin:18px auto 0;padding:19px 16px;max-width:350px;background:#fff5f8;color:#7c2049;border-radius:15px;line-height:1.85;text-align:left;animation:appear .7s ease;overflow-wrap:anywhere}
+.letter.show{display:block}
+.letter h4{text-align:center;color:#b32965;font-size:21px;margin:0 0 12px}
+.letter p{font-size:14px;margin:10px 0;white-space:pre-line}
+.poem{text-align:center;font-weight:500}
+.arabic{direction:rtl;text-align:right;font-size:17px!important;line-height:2}
+.signature{text-align:right;font-style:italic;color:#b32965}
+.envelope-card.locked{opacity:.48}
+.envelope-card.locked .envelope-button{pointer-events:none}
+.envelope-card.done{border-color:#ffb6d1;background:#ffffff18}
+.footer{margin-top:25px;color:#f5b6d0;font:10px Arial,sans-serif;letter-spacing:2px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="small">A SPECIAL CELEBRATION • 100 DAYS</div>
+<h1>Happy 100 Day<br>My Queen ❤️</h1>
+<p class="subtitle">Caawa waa maalin kuu gaar ah YariisteyDii 🫶😋</p>
+
+<div class="cake-area">
+<div class="cake">
+<div class="plate"></div><div class="bottom"></div><div class="top"></div>
+<div class="icing"></div><div class="drip"></div>
+<div class="number-wrap"><span class="one">1</span><span class="zero">00</span></div>
+</div>
+</div>
+
+<p class="instruction">Si qurux badan u niyeyso kadibna Fur Hadiyadaan bashqadaa Mommy 🫶🥺</p>
+<button class="envelope-button" id="mainOpen">
+<div class="envelope"><div class="env-body"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">♥</div></div>
+<span class="tap-label" id="mainLabel">TAABO SI AAD U FURTO 💌</span>
+</button>
+
+<section id="surprises">
+<h2 class="section-title">Saddex Hadiyadood oo Kuu Gaar ah 💝</h2>
+<p class="section-note">Mid mid u fur bashqadaha, mid walbana fariin gaar ah ayuu kuu sidaa.</p>
+
+<div class="envelope-card" id="card1">
+<h3>1. Geeraar Gaar ah 🌹</h3>
+<button class="envelope-button" data-letter="letter1" data-card="card1">
+<div class="envelope"><div class="env-body"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">🌹</div></div>
+<span class="tap-label">FUR BASHQADDA KOOWAAD</span>
+</button>
+<div class="letter" id="letter1">
+<h4>Gabadhi JapuuTi 🫶</h4>
+<div class="poem">
+<p>Riyo aan rabaa rumowday<br>
+Raaliyaan helay ii wanaagsan<br>
+Qofbaan helay aan ku raystay<br>
+Rakaaday sidaan rabooday<br>
+Rabibaa garabkey istaagay<br>
+Qofbaan Ruuxdayda siiyay<br>
+Runtu waa lama huraane<br>
+Amiira waan ku raystay<br>
+🥹🫶🤲</p>
+<p>Bilicda wajigeeDa suuban<br>
+Baalashada indhaheeDa dooxan<br>
+Quruxda barakada ku dheehan<br>
+Bilkhayr weeye arageedu<br>
+😋🫶😋</p>
+<p>Indhahaan deerada lamoodo<br>
+Naflihii kugu Arkaaba daaleen<br>
+Dushaada qofkii Laraacaa<br>
+Carafbaa sankiisa dooxda<br>
+Ileen dookhaa cajiibee<br>
+Amiiro waa Dahab lamooDka<br>
+😋🫶😋🫶😋🫶</p>
+<p>Anagaa kala xad dheere<br>
+Muxuu xiisuhu Badanaaday<br>
+Maxaan jeclhy xageeda<br>
+Anoo xay ah inaan lajoogo<br>
+Ileen tani waa xad dhaafe<br>
+Maxaa qurux loo xambaarshay<br>
+🫶😋</p>
+<p>Gabadhaan doortay dheeheeda<br>
+Dherarka tumaheeda daadsan<br>
+Quruxda Dhaqanbaa udheer<br>
+Dhalaalkuna waa ugooni<br>
+Raboow igu dhaadatee<br>
+Yagleel qoys dhexdeena suuban<br>
+🫶😋🫶😋</p>
+<p>Arkooday Gabadhii JapuuTi<br>
+Amaanay Quruxdeeda gaarkaa<br>
+Intaan duni sooba joogay<br>
+Qofaan Lacajabo abuurkeeda<br>
+Wili saan uguma waalan🥺<br>
+🫶😋🫶😋</p>
+</div>
+</div>
+</div>
+
+<div class="envelope-card locked" id="card2">
+<h3>2. Fariin Kuu Gaar ah 💌</h3>
+<button class="envelope-button" data-letter="letter2" data-card="card2" disabled>
+<div class="envelope"><div class="env-body"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">💗</div></div>
+<span class="tap-label">MARKA HORE FUR BASHQADDA 1</span>
+</button>
+<div class="letter" id="letter2">
+<h4>Boqoradaydii Amiiro Ismail Djama ❤️</h4>
+<p>BoqoradaaN jaclaaday Amiiro Ismail djama Marka hore waxaan ku salamaaya salaan kaaga timid qalbigii aadka kuu jeclaaday Oo adiga un kugu koobnaaday Salaama 🫶🤗</p>
+<p>Maanta Ay bishu tahay 17/11/2026 Waxay ku beegantahay 3bilood iyo 10 bari aan adiga ku aqaano amaba aan is naqaano Hooyo Waa 100 maalmood oo aan bartay wax walbo qurxoon Gaar ahaan adiga Oo ahaa waxa ugu qurxan een bartay Runtii Hadaan dhaho qeex Quruxda amiiro Ma qeexi xitaa malala sheegi karo Oo maba ahan waxaan qiyaasi karo Wlhi balse inta yar ee arkay Oon ka arkay quruxdaada Waa kuwo aan aad ula cajabaya YariisteyDii Indhahaaga Oo iyagaba ah kuwa kaliya ee aadka ujeclahay markii adiga lagaasoo tago iyagu waa kuwo usameesan Si cajaa'ib Oo aad uquruxoon uwaaween sida deerada 🦌</p>
+<p class="arabic">عَيْنَاكِ يَا أَمِيرَةُ كَعَيْنَيِ الْغَزَالِ، فِيهِمَا سِحْرُ الْجَمَالِ وَبَرَاءَةُ الطِّفْلِ، وَمِنْ نَظْرَةٍ وَاحِدَةٍ تَأْسِرَانِ الْقُلُوبَ. ❤️🦌</p>
+<p>Timahaaga Iyagana waa kuwo aan udharero markaan arko iyaga waayo maahan kaliya qurux iyaga waa caraf waa udgoon waa Jileec waa sida faraska oo kale m.a 🫶😋</p>
+<p>Dhexyar dhuubo Quruxdaba aday kaa bilaabataa adayna kugu dhamaataa wlhie</p>
+<p>Saa'ida Saa'id qurux YariisteyDii Quruxudaadaan Mar isku dayaya inaa safiro ama qeexo Balse waan uwaayay micno gaar ah oon ku sharaxo balse waxaan kusoo koobay erayo carabiyaa Waxaana ku iri</p>
+<p class="arabic">أَمِيرَةُ، أَنْتِ جَمَالٌ تَعْجِزُ الْكَلِمَاتُ عَنْ وَصْفِهِ، وَقَمَرٌ يَخْجَلُ الْبَدْرُ مِنْ نُورِهِ، فَسُبْحَانَ مَنْ أَبْدَعَ فِي خَلْقِكِ. ❤️✨</p>
+<p>Marka xigta horta kow alle ayaa mahadaa leh Oo adigaa ah nuurka ilaa baray taasna waa umahadceliyaa alle YariisteyDii Marka labaad alle wuxuu leeyahay ملاا يشكر الناس لا يشكر الله</p>
+<p>Waxaa xaqiiqa ah Mommy Inaan adiga aad kuu jeclaaday Wlhi 100kaa maalina Wlhi waligay kaama xiisa dhicin Sidaa kuu bartay maalintii jimcaha ahayD Aa ilaa maanta Oy talaado tahay Aa wili sidii kuuxiiseeyaa BoqoradayDii Waxa kaloo xaqiiqa ah Inaa adiga aad uxanaaq badantahay aadna umaseer badanthy Taasna waaba waxa kaliyoon aan isdhaho Wuu igu siyaadiyay jaceylkaan kuuqabo Adiga waad xanaaqdaa Saacado ama maalin dhan ama maalmo balse markaad xanaaq bogoto aad igu nafisto Baad caadi soo noqotaa ana markaas ka faa'idaysata maadaama aad tahay markaas qof Cusub ama igu cusub camala Markaaslee jaceyl xad dhaaf kuusheegtaa adigana maadaama aad ubaahantahay qof si dagan kuula hadlo anaa isku dayo inaa noqdo qofka uhoreeya Ee kudhaha eraydaas 😋😋😋😋😋😋😋</p>
+<p>Marka xigta hooyo mcn YariisteyDa boqoradaydii amiiradayDii Ani Marwlbo waxaan ahay garabkaaga Markay ku cidleenayaan Dadkaaga hooyo mcn gadaasheeD Waa ogahay waxaad dareemayso markay iyaga si xun kuula hadlaan Markaasna aad qaadato go'aamo qaldan Oo kugu zbbaya Xanaaaqaas Saa'idkaa Balse dhib malahan noloshaad kunooshahay ilaa waagaad iisheegtay wlhi oo bilaahi oo talhi marksta hapiiN kasta waan ka fikiraa Maxay sameen kartaa iyada Hada xaaladee kujiraa Mida ugu daran waa in wadnaha lagaagaso booda Marwlbo hooyo taasna aadbay iidamaqdaa wlhi Si saa'idaa waliba Waxna kuuuma qaban karo balse kaliya waxaa awoodaa inaa Xoogaa jaanis kusiiyo Si aad hawo uqaadato unasoo nafisto Si aadan adoo wadnaha lagaa hayo usii xanaaqin ilahay xanuukaas iyo kuwo kale Hakaa caafiyo 🫶🥺🥺🫶🤲</p>
+<p>Waa tu teclahay hooyo aadbaan tuu teclahay si saa'idaa wiliba Oo xad dhaafa Gabar yaroo aad uqurx badan tahay Aad udabaceed fiican Aadna unaxariis badan naxariistaadu yaysan banaanka imaan balse wlhi ani waa dareemaa waana ku noolahaya xasuustaada iyo sawiradaada</p>
+<p>Waana ku jeclaan doonaa intaan noolahaya BoqoradayDii Qof labrtaa tahay Oo lala dhaqmo waxaana aad urajeenaya ilahayna ka barayaa inaa kulano Isla faraxno anagoo wada jira isla fariisano Cunto isla cuno waqti qurux badan qaadano Aadna iinoqoto marwo Aan kufaano marwlbo I.a Waana ku jeclhy amiiro 🫶🥺🫶🥺🫶🥺</p>
+<p class="signature">Happy 100 Day, Amiiro ❤️</p>
+</div>
+</div>
+
+<div class="envelope-card locked" id="card3">
+<h3>3. Fariin Funny ah 😅</h3>
+<button class="envelope-button" data-letter="letter3" data-card="card3" disabled>
+<div class="envelope"><div class="env-body"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">😂</div></div>
+<span class="tap-label">MARKA XIGTA FUR BASHQADDA 2</span>
+</button>
+<div class="letter" id="letter3">
+<h4>Halkaan Waa Funny-ga! 😂</h4>
+<p>Horta waxaas oo dhan waad soo akhriday! Hadda waxaad joogtaa meeshii ugu dambaysay, waxaad iga sugaysaa funny 😁</p>
+<p>Balse waxba ma hayo ee waxaan hayaa kaliya… 🖕😂</p>
+<p>Haye haye, kaftan weeye! Ha xanaaqin Mommy, maanta waa maalintaada ee qosol iyo farxad ku dhammee! 🙆‍♂️😅😭</p>
+<p class="signature">Happy 100 Day My Queen! 🫶</p>
+</div>
+</div>
+</section>
+
+<div class="footer">MADE WITH LOVE • JUST FOR YOU</div>
+</div>
+
+<script>
+for(let i=0;i<24;i++){
+ const h=document.createElement("span");
+ h.className="heart";h.textContent="♥";
+ h.style.left=Math.random()*100+"%";
+ h.style.fontSize=(12+Math.random()*18)+"px";
+ h.style.animationDuration=(8+Math.random()*9)+"s";
+ h.style.animationDelay=(-Math.random()*15)+"s";
+ document.body.appendChild(h);
+}
+document.getElementById("mainOpen").addEventListener("click",function(){
+ this.classList.add("open");
+ document.getElementById("mainLabel").textContent="HADIYADAHAAGA WAY KU SUGAYAAN ❤️";
+ document.getElementById("surprises").classList.add("show");
+ document.getElementById("surprises").scrollIntoView({behavior:"smooth",block:"start"});
+});
+document.querySelectorAll("[data-letter]").forEach(button=>{
+ button.addEventListener("click",function(){
+  if(this.disabled)return;
+  const letter=document.getElementById(this.dataset.letter);
+  const card=document.getElementById(this.dataset.card);
+  if(letter.classList.contains("show"))return;
+  this.classList.add("open");
+  letter.classList.add("show");
+  card.classList.add("done");
+  this.querySelector(".tap-label").textContent="BASHQADDAN WAA LA FURAY ❤️";
+  const number=Number(this.dataset.letter.replace("letter",""));
+  if(number<3){
+   const next=document.getElementById("card"+(number+1));
+   next.classList.remove("locked");
+   const nextButton=next.querySelector("button");
+   nextButton.disabled=false;
+   next.querySelector(".tap-label").textContent="TAABO SI AAD U FURTO";
+  }
+  letter.scrollIntoView({behavior:"smooth",block:"center"});
+ });
+});
+</script>
+</body>
+</html>
